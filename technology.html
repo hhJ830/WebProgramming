@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        hr {
+            width: 10%;
+            text-align: center;
+        }
+
+        .center {
+            text-align: center;
+        }
+
+        section {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .cluster {
+            text-align: center;
+            margin: 20px;
+        }
+
+        .cluster img {
+            width: 300px;
+            height: 300px;
+        }
+
+        .cluster h3 {
+            margin: 10px 0;
+        }
+
+        .cluster p {
+            line-height: 1.5;
+        }
+
+        .inline {
+            display: inline-block;
+            border: solid 1px;
+            border-radius: 100px;
+            margin: 20px;
+            padding: 15px;
+            background-color: aliceblue;
+
+        }
+
+        .hidden {
+            display: none;
+
+        }
+
+        .hidden-content {
+            display: none;
+            padding-left: 10px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .container {
+            white-space: nowrap;
+        }
+
+        .width {
+            width: 90%;
+        }
+
+        .item {
+            display: flex;
+        }
+
+        .position {
+            width: 80%;
+            text-align: center;
+        }
+        #quorum{
+            margin-left: 10%;
+        }
+        .position .inline:hover{
+            cursor:pointer;
+            background-color:cornsilk;
+        }
+    </style>
+    <link href="header.css" rel="stylesheet">
+</head>
+
+<body>
+    <article>
+        <header class="header">
+            <img src="밤하늘1.png" alt="이미지1">
+
+        </header>
+        <nav>
+            <ul>
+                <li><a class="nav_a" href="home.html">about me</a></li>
+                <li><a class="nav_a" href="project.html">project</a></li>
+                <li><a class="nav_a" href="technology.html">technology</a></li>
+                <li><a class="nav_a" href="futureplan.html">future plan</a></li>
+            </ul>
+        </nav>
+        <h3>&#x1F319 관심 기술</h3>
+        <section>
+            <div style="margin-left:1%">
+                <h4>서버 클러스터</h4>
+                <p>
+                    각기 다른 서버(Server Enterprise or server Datacenter)들을 하나로 묶어서 하나의 시스템같이 동작하게 함으로써<br>
+                    클라이언트들에게 고가용성의 서비스를 제공하는것을 말한다.<br>
+                    클러스터로 묶인 한시스템에 장애가 발생하면, 정보의 제공 포인트는 클러스터로 묶인 다른 정상적인 서버로 이동한다.<br>
+                    서버클러스터는 사용자로 하여금 서버 기반 정보를 지속적이고, 끊기지않게 제공받을수 있게 한다.<br><br>
+                    
+                    <br>
+                    <hr>
+                    <br>
+
+                <h4>서버 클러스터의 구성</h4>
+                클러스터 기술은 세가지 유형의 장애를 대비합니다.<br><br>
+                </p>
+
+                <div class="position">
+                    <div class="inline" onClick="toggleDiv('hidden1')">
+                        어플리케이션과 서비스 장애
+                    </div>
+                    <div class="inline" onClick="toggleDiv('hidden2')">
+                        시스템과 하드웨어 장애
+                    </div>
+                    <div class="inline" onClick="toggleDiv('hidden3')">
+                        여러기관의 사이트 장애
+                    </div>
+                    <div class="hidden" id="hidden1">
+                        - 어플리케이션과 필수 서비스에 영향을 미치는 경우
+                    </div>
+                    <div class="hidden" id="hidden2">
+                        - 하드웨어를 구성하는 CPU, drives , memory, network adapters, 전원공급기에 영향을 미치는 경우
+                    </div>
+                    <div class="hidden" id="hidden3" onClick="toggleDiv('hidden3')">
+                        - 자연재해, 정전, 연결 중단 등으로 발생할수 있다
+                    </div>
+                </div>
+                <br><br>
+
+                <div class="cluster">
+                    <img src="single_quorum_device_cluster.gif" alt="Single Quorum Device Cluster">
+                    <h3>Single Quorum Device Cluster</h3>
+                    <p style="font-size:13px;">
+                        두 개 이상의 노드가 있고 모든 노드가 하나 이상의 클러스터 저장 장치에 연결되도록 구성된 클러스터 구성입니다.<br>
+                        클러스터 구성 데이터는 단일 클러스터 저장 장치에 저장됩니다.
+                    </p>
+                </div>
+                <br>
+                <div class="cluster">
+                    <img src="Majority_Node_Set_Cluster.gif" alt="MNS (Majority Nodes Set)">
+                    <h3>MNS (Majority Nodes Set)</h3>
+                    <p style="font-size:13px;">
+                        MNS (Majority Nodes Set)는 전체 서버에 분산된 공유 저장소 버스 및 쿼럼이 있거나 없는 다중 서버 구성입니다.<br>
+                        MNS (주 노드 집합) 클러스터에서 각 노드는 쿼럼 장치 데이터의 로컬 복사본을 유지합니다.<br>
+                        Windows Server 2003 Enterprise는 클러스터당 최대 4개의 노드를 지원하고 Datacenter는 최대 8개의
+                        노드를 지원합니다.<br>
+                        MNS (주 노드 집합) 클러스터의 각 노드는 쿼럼의 로컬 복사본을 유지 관리하므로 공유 저장 장치가 필요하지 않으며 MNS (주 노드 집합) 클러스터는
+                        지리적으로 분산된 환경에서 WAN을 통해 배포할 수 있습니다.</p>
+                </div>
+
+                <br>
+                <div id="quorum">
+                    <h4>+ Quorum</h4>
+                    <p>
+                        클러스터의 구성에 필수적으로 항목 or 정책<br>
+                        예를 들어 quorum disk 3이라고 한다면, Disk array에 5개의 Disk중 3개 무조건 활성화 상태여야만
+                        클러스터가 정상 동작중이라고 할 수 있다<br><br>
+
+                        Quorum Data를 보관 관점에서 보면 cluster구성을 갖고 있는 Disk어레이(DB)를 하나로 구성할지, 여러개로 구성할지등으로 구분될 수 있다.<br>
+                        대다수의 시스템이 single quorum Data 방식을 따른다
+                    </p>
+
+                </div>
+                <br>
+                <hr>
+        </section>
+
+        <br>
+        <h3>&#x1F319 관련 기업 상세 내용</h3>
+        <section>
+            <div class="width">
+                <p style="font-size: 30px; font-style:italic; font-weight: 600;" >우아한형제들</p>
+            
+                <p style="font-weight: 600;">기술스택, 툴</p>
+                <div>
+                    <div class="inline">React</div>
+                    <div class="inline">JavaScript</div>
+                    <div class="inline">TypeScript</div>
+                    <div class="inline">Spring Framework</div>
+                </div>
+                <br><br>
+                <iframe src="https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=38563977&view_type=search" width="100%" height="800px">
+                    
+                </iframe>
+            </div>
+        </section>
+        <hr>
+        <footer>
+            <div class="center">
+                <div>공주대학교 소프트웨어학과</div>
+                <div>/</div>
+                <div>202001824</div>
+                <div>/</div>
+                <div>장현희</div>
+                <div>/</div>
+                <div>2001.08.30</div>
+                <div>/</div>
+                <div>jhh8890@naver.com</div>
+                <div>/</div>
+                <div><a class="git" href="https://m.blog.naver.com/jhh02614" style="color:green;">My Blog</a></div>
+                <div>/</div>
+                <div><a class="git" href="https://github.com/hhJ830">My GitHub</a></div>
+            </div>
+        </footer>
+    </article>
+    <script>
+        function toggleDiv(divId) {
+            var div = document.getElementById(divId);
+            var div1 = document.getElementById('hidden1');
+            var div2 = document.getElementById('hidden2');
+            var div3 = document.getElementById('hidden3');
+
+            if (div == div1) {
+                div.style.display = 'block';
+                div2.style.display = 'none';
+                div3.style.display = 'none';
+            } else if (div == div2) {
+                div1.style.display = 'none';
+                div.style.display = 'block';
+                div3.style.display = 'none';
+            }
+            else {
+                div1.style.display = 'none';
+                div2.style.display = 'none';
+                div.style.display = 'block';
+            }
+
+        }
+        
+    </script>
+</body>
+
+</html>

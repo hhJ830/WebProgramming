@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        /*화살표 스타일링*/
+        .icon {
+
+            margin-left: 200px;
+        }
+
+        .icon_div1 {
+            margin-left: 130px;
+            margin-top: 10px;
+            font-size: 20px;
+        }
+
+        /* 툴팁 스타일링 */
+        .tooltip {
+            position: relative;
+            display: inline-block;
+            cursor: pointer;
+        }
+
+        .tooltip .tooltiptext {
+            visibility: hidden;
+            width: 80px;
+            background-color: rgba(4, 15, 82, 0.7);
+            color: rgb(255, 255, 255);
+            text-align: center;
+            border-radius: 2px;
+            padding: 5px;
+            position: absolute;
+            z-index: 1;
+            top: 130%;
+            left: 50%;
+            transform: translateX(-50%);
+            opacity: 0;
+            transition: opacity 0.3s;
+            font-size: 15px;
+            font-weight: 100;
+        }
+
+        .tooltip:hover .tooltiptext {
+            visibility: visible;
+            opacity: 1;
+        }
+
+
+        /* 툴팁 스타일링*/ 
+        .tooltip2 {
+            position: relative;
+            display: inline-block;
+            cursor: pointer;
+        }
+
+        .tooltip2 .tooltiptext2 {
+            visibility: hidden;
+            width: 500px;
+            background-color: rgba(4, 15, 82, 0.7);
+            color: rgb(255, 255, 255);
+            text-align: center;
+            border-radius: 2px;
+            padding: 5px;
+            position: absolute;
+            z-index: 1;
+
+            left: 800%;
+            transform: translateX(-50%);
+            opacity: 0;
+            transition: opacity 0.3s;
+            font-size: 15px;
+            font-weight: 100;
+        }
+
+        .tooltip2:hover .tooltiptext2 {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 80%;
+            max-height: 500px;
+        }
+
+        td {
+            border-top: 1px solid transparent;
+            padding: 20px;
+            vertical-align: top;
+
+        }
+
+        .content {
+            display: none;
+            padding: 30px;
+            width: 1000px;
+            text-align: center;
+
+        }
+
+        .content div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            height: 100vh;
+
+        }
+
+        .td-style {
+
+
+            display: flex;
+            justify-content: center;
+
+        }
+
+        .toggle-section {
+            cursor: pointer;
+        }
+
+        .media-container {
+            white-space: nowrap;
+            /* 줄 바꿈 방지 */
+        }
+
+        .media-container>* {
+            display: inline-block;
+            /* 인라인 블록 요소로 설정 */
+            vertical-align: top;
+            /* 상단 정렬 */
+            margin-right: 10px;
+            /* 이미지와 비디오 간 간격 */
+        }
+
+        .textcenter {
+            text-align: center;
+        }
+
+
+        .section {
+            display: none;
+        }
+
+        .p_style {
+            color: dimgray;
+        }
+
+        #blog {
+            text-decoration: none;
+
+            color: darkblue;
+        }
+
+        #blog:hover {
+            color: white;
+            background-color: rgb(0, 250, 62);
+            font-weight: 600;
+        }
+
+        .div_h3 {
+            display: flex;
+            align-items: center;
+        }
+
+        .div_h3 p {
+            margin-left: 10px;
+        }
+
+        #song {
+            color: black;
+        }
+    </style>
+    <link href="header.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <article>
+        <header class="header">
+            <img src="밤하늘1.png" alt="이미지1">
+        </header>
+        <nav>
+            <ul>
+                <li><a class="nav_a" href="home.html">about me</a></li>
+                <li><a class="nav_a" href="project.html">project</a></li>
+                <li><a class="nav_a" href="technology.html">technology</a></li>
+                <li><a class="nav_a" href="futureplan.html">future plan</a></li>
+            </ul>
+        </nav>
+
+        <aside>
+            <div class="bottom">
+                <div class="div_a">
+                    <div class="post-it"></div>
+                    <div class="toggle-section" onClick="toggleSection('section1')"><span>프로젝트</span></div>
+                </div>
+                <div class="div_a">
+                    <div class="post-it"></div>
+                    <div class="toggle-section" onClick="toggleSection('section2')"><span>본인 역량</span></div>
+                </div>
+
+
+            </div>
+        </aside>
+
+
+        <section id="section1">
+            <div class="div_h3">
+                <h3>&#x1F319 프로젝트</h3>
+                <p class="toggle-section" onClick="toggleSection1('p9')">
+                    <img src="어려운 아이콘.gif" width="40px" height="40px">
+                </p>
+            </div>
+            <table>
+
+                <tr>
+
+                    <td>
+                        <p class="toggle-section" onClick="toggleSection1('p1')">2020 KNU 창업경진대회</p>
+                    </td>
+                    <td colspan="10" rowspan="11">
+                        <div class="td-style">
+                            <div class="content" id="p1" style="background-color:aliceblue">
+                                <p class="textcenter">
+                                <p style="font-size: 24px;">PLAY WITH US</p>
+                                <p style="font-size:13px; margin-left: 10px;">악기 연주자를 위한 악보 공유 커뮤니티 플랫폼</p><br>
+                                <li>창업 아이템 분석/경쟁사 분석/시장 조사/수익 구조 조사</li><br>
+                                <img src="2020 창업경진대회.png" width="500px">
+                                </p>
+                            </div>
+                            <div class="content" id="p2" style="background-color:aliceblue">
+                                <p class="textcenter">
+                                <p style="font-size: 24px;">혼밥의 구세주</p>
+                                <p style="font-size:13px; margin-left: 10px;">재료로 레시피를 찾는 1인 가구를 위한 레시피 공유 플랫폼</p><br>
+                                <li>android 개발 활동</li><br>
+                                </p>
+                                <div class="media-container">
+                                    <img src="2021_혼밥의구세주ui.png" width="300px">
+                                    <img src="image06.png" width="300px">
+                                </div>
+                            </div>
+                            <div class="content" id="p3" style="background-color:aliceblue">
+                                <p class="textcenter">
+                                <p style="font-size: 24px;">혼밥의 구세주</p>
+                                <li>창업 아이템 분석</li><br>
+
+                                <img src="2021 혼밥의구세주_swot분석1.png" width="600px"><br><br>
+                                <img src="2021 혼밥의구세주_swot분석2.png" width="600px">
+                            </div>
+                            <div class="content" id="p4" style="background-color:aliceblue">
+                                <p class="textcenter">
+                                <p style="font-size: 24px;">어플리케이션·아두이노 기반 무인 계산 시스템</p>
+                                <li>Android, MySQL, PHP, Arduino, Bluetooth, Python</li><br>
+                                <div class="media-container">
+                                    <img src="학부융합_흐름도.png" width="300px">
+                                    <video src="학부융합_전체.mp4" autoplay controls width="300px"></video>
+                                </div>
+                            </div>
+
+                            <div class="content" id="p9" style="background-color:aliceblue">
+                                <p class="textcenter">
+                                <h2>가장 어려웠던 부분/해결 방안</h2>
+                                <h4>어플리케이션·아두이노 기반 무인 계산 시스템</h4><br><br>
+
+                                대학교 2학년 때 프로젝트 경험을 쌓고자 학부융합 프로그램이라는 팀 프로젝트에 참여하였습니다.<br>
+                                주제를 '어플리케이션·아두이노 기반 무인 계산 시스템'로 선정하여 어플리케이션 개발 역할을 맡아 진행되었습니다.<br>
+                                그 당시 안드로이드에 대한 지식이 거의 없어 공부를 병행하며 개발해야 했으나 시간이 촉박하여 개발 완성을 중심으로 진행되었습니다.<br>
+                                그러나 DB 서버를 여는 것부터 json파일을 만들고 PHP를 사용하여 DB에 접근하는 것까지 <br>생각보다 안드로이드를 만드는데 필요한 요소들이 너무
+                                많았습니다.<br><br>
+                                제가 개발한 화면 중 검색 기능 화면은 검색 텍스트를 입력하고 버튼을 누르면<br>해당 텍스트가 들어간 상품명, 브랜드 명을 DB에서 찾고 json파일로
+                                받아와 안드로이드에서 출력하는 거였습니다.<br>
+                                이를 구현하기 위해서는 PHP를 사용하여 DB에 접근해야 했습니다.<br>
+                                PHP의 개념이 생소하여 난감했지만 여기저기 자료를 찾아본 결과 DB값을 가져올 수 있게 되었습니다.<br>
+                                PHP 해결 후 안드로이드에 집중하여 다른 화면 개발을 진행하던 중 다른 팀원의 기능에서도 PHP 파일이 필요해 제게 도움을 요청했었습니다.<br>
+                                하지만 개발을 중심으로 진행한 나머지 PHP의 개념에 대해 바로 잊어버렸던 상태였습니다.<br>
+                                결국 큰 도움은 주지 못했습니다. 이때 개발 경험도 중요하겠지만 지식 습득을 놓치고 있었다는 걸 깨달았습니다.<br>
+                                개발 활동을 하더라도 개념 복습이 중요하다는 걸 깨달았고 <a id="blog"
+                                    href="https://m.blog.naver.com/jhh02614/222553369982">블로그</a>에 이에 대한 개념을 정리하게
+                                되었습니다.<br>
+                                실무에서도 개발에서 그치지 않고 스스로 복습하며 공부하는 자세를 갖고자 노력할 것입니다.
+                                </p>
+
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p class="toggle-section" onClick="toggleSection1('p2')">2021 KNU 창업동아리</p>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p class="toggle-section" onClick="toggleSection1('p3')">2021 KNU 창업경진대회</p>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p class="toggle-section" onClick="toggleSection1('p4')">2021 학부융합/한국정보기술학회 추계학술대회</p>
+
+                    </td>
+                </tr>
+
+
+            </table>
+
+        </section>
+
+        <section class="section" id="section2">
+
+            <h3 class="tooltip2">
+                &#x1F319 본인 역량
+                <span class="tooltiptext2">+ 자격증 +<br>컴퓨터활용능력 1급 & 한국사능력검정시험 1급</span>
+            </h3>
+            <table>
+
+                <tr>
+
+                    <td>
+                        <p class="toggle-section" onClick="toggleSection1('p5')">2020 KNU 창업경진대회 수상</p>
+                    </td>
+                    <td colspan="10" rowspan="11">
+                        <div class="td-style">
+                            <div class="content" id="p5" style="background-color: rgb(255, 244, 230)">
+
+                                <p class="textcenter">
+                                <p style="font-size: 20px; font-weight: 800;">2020 창업경진대회 수상</p><br>
+                                PLAY WITH US<br>
+                                
+                                <li>창업 관련 분석 역량</li>
+                                </p>
+                                
+                                <img src="2020_창업경진대회상장.png" width="600px">
+
+                            </div>
+                            <div class="content" id="p6" style="background-color: rgb(255, 244, 230)">
+
+                                <p class="textcenter">
+                                <p style="font-size: 20px; font-weight: 800;">2021 창업경진대회 수상</p><br>
+                                혼밥의 구세주<br>
+                                <li>창업 관련 분석 역량</li>
+                                </p>
+                                <img src="2021_창업경진대회상장.png" width="600px">
+
+
+                            </div>
+
+                            <div class="content" id="p8" style="background-color: rgb(255, 244, 230)">
+
+                                <p class="textcenter">
+                                <p style="font-size: 20px; font-weight: 800;">2021 학부융합/한국정보기술학회 추계학술대회 수상</p><br>
+                                어플리케이션·아두이노 기반 무인 계산시스템<br>
+                                <li>Android, MySQL, PHP 역량</li>
+                                </p>
+                                <img src="학부융합_상장.jpg" width="600px">
+
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p class="toggle-section" onClick="toggleSection1('p6')">2021 KNU 창업경진대회 수상</p>
+
+
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p class="toggle-section">2021 KNU 창업동아리</p>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p class="toggle-section" onClick="toggleSection1('p8')">2021 학부융합/한국정보기술학회 추계학술대회 수상</p>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td><img class="icon" src="화살표1.png" width="30px" height="30px">
+                        <div class="icon_div1">
+                            <span class="tooltip">Android, My SQL, PHP<br>
+                                <p style="font-size: 18px;">창업 아이템 분석,</p><br>
+                                <p style="font-size: 15px;">+HTML, CSS, JS</p>
+                                <span class="tooltiptext">도전 정신!!!</span>
+                        </div>
+                    </td>
+                </tr>
+
+            </table>
+
+
+        </section>
+        <footer>
+            <div class="center">
+                <div>공주대학교 소프트웨어학과</div>
+                <div>/</div>
+                <div>202001824</div>
+                <div>/</div>
+                <div>장현희</div>
+                <div>/</div>
+                <div>2001.08.30</div>
+                <div>/</div>
+                <div>jhh8890@naver.com</div>
+                <div>/</div>
+                <div><a class="git" href="https://m.blog.naver.com/jhh02614" style="color:green;">My Blog</a></div>
+                <div>/</div>
+                <div><a class="git" href="https://github.com/hhJ830">My GitHub</a></div>
+            </div>
+        </footer>
+    </article>
+
+    <script>
+        function toggleSection(sectionId) {
+            var section = document.getElementById(sectionId);
+            var section1 = document.getElementById('section1');
+            var section2 = document.getElementById('section2');
+
+            if (section == section1) {
+                section.style.display = 'block';
+                section2.style.display = 'none';
+            } else {
+                section1.style.display = 'none';
+                section.style.display = 'block';
+            }
+        }
+
+        function toggleSection1(contentId) {
+            var content = document.getElementsByClassName('content');
+            for (var i = 0; i < content.length; i++) {
+                content[i].style.display = 'none';
+            }
+            var content = document.getElementById(contentId);
+            content.style.display = 'block';
+        }
+
+    
+    </script>
+</body>
+
+</html>
